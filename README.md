@@ -11,7 +11,7 @@ BADJA is the Benchmark Animal Dataset of Joint Annotations released with the pap
 }
 ```
 
-| <img src="bear.gif" width="25%" height="25%"> | <img src="camel.gif" width="25%" height="25%"> | <img src="cows.gif" width="25%" height="25%"> | <img src="rs_dog.gif" width="25%" height="25%"> |
+<img src="bear.gif" width="24%" height="24%"> <img src="camel.gif" width="24%" height="25%"> <img src="cows.gif" width="24%" height="24%"> <img src="rs_dog.gif" width="24%" height="24%">
 
 Annotations in are provided in this repository as *.json files for a total of 9 video sequences.
 1. Seven video sequences from the [DAVIS 2017 Video Segmentation dataset](https://arxiv.org/abs/1704.00675) of Pont-Tuset et al.,
