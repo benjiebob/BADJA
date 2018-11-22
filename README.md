@@ -17,7 +17,7 @@ Annotations in are provided in this repository as *.json files for a total of 9 
 1. Seven video sequences from [DAVIS 2017 Video Segmentation dataset](https://arxiv.org/abs/1704.00675) (Pont-Tuset et al. 2017),
 2. Two video sequences provided in extra_videos which were sourced by hand. 
 
-Note that for the time being, raw frames for the tiger and cat sequences have been omitted from the extra_videos repository due to licensing restrictions.
+Note that raw frames for the tiger and cat sequences have been necessarily omitted from the extra_videos repository due to licensing restrictions.
 
 We annotate 20 joints which are related to positions on the SMAL quadruped mesh (Zuffi et al. 2018) defined in `smal_CVPR2018.pkl'. This can be downloaded from the [SMALR](http://smalr.is.tue.mpg.de/) page.
 
