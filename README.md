@@ -1,6 +1,6 @@
 # BADJA
 
-<img src="bear.gif" width="24%" height="24%"> <img src="camel.gif" width="24%" height="25%"> <img src="cows.gif" width="24%" height="24%"> <img src="rs_dog.gif" width="24%" height="24%">
+<img src="gifs/bear.gif" width="24%" height="24%"> <img src="gifs/camel.gif" width="24%" height="25%"> <img src="gifs/cows.gif" width="24%" height="24%"> <img src="gifs/rs_dog.gif" width="24%" height="24%">
 
 BADJA is the Benchmark Animal Dataset of Joint Annotations released with the paper [Creatures Great and SMAL: Recovering the shape and motion of animals from video](https://arxiv.org/abs/1811.05804). If you use this dataset, please consider citing this work:
 
