@@ -19,14 +19,12 @@ We annotate 20 joints which are related to positions on the SMAL quadruped mesh 
 
 The position of the first 16 joints (legs, neck, and tail) are given by SMAL model joints. The remainder (nose tip, chin, left ear and right ear) relate to specific SMAL vertices.
 
------------------------------
-POSITION  | SMAL_VERTEX_ID
------------------------------
- NOSE_TIP | 1863
-   CHIN   | 26
- LEFT EAR | 149
-RIGHT EAR | 2124
------------------------------
+| Position            | SMAL Vertex ID | 
+| ---------------- | -----| 
+| Nose Tip  | 1863 | 
+| Chin  | 26 | 
+| Left Ear  | 149 | 
+| Right Ear  | 2124 |
 
 Annotations are provided approximately every 5 video frames with the exception of rs_dog which is annotated densely.
 
