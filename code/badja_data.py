@@ -1,7 +1,7 @@
-###################################################################################################################
-# Benjamin Biggs | bjb56@cam.ac.uk | http://mi.eng.cam.ac.uk/~bjb56/
-# Please cite `Creatures Great and SMAL: Recovering the shape and motion of animals from video' if you use this dataset
-###################################################################################################################
+###########################################################################################################################
+# Benjamin Biggs | bjb56@cam.ac.uk | http://mi.eng.cam.ac.uk/~bjb56/                                                      #
+# Please cite `Creatures Great and SMAL: Recovering the shape and motion of animals from video' if you use this dataset   #
+###########################################################################################################################
 
 import numpy as np
 import scipy.misc
@@ -9,10 +9,22 @@ from random import shuffle
 import json
 import os
 import cv2
+import sys
 
 from joint_catalog import SMALJointInfo
 
-BADJA_PATH = "/scratch/bjb56/data/datasets/animals/BADJA"
+BADJA_PATH = os.path.dirname(sys.path[0]) # Assumes you are exectuting from "BADJA" root
+IGNORE_ANIMALS = [
+    # "bear.json",
+    # "camel.json",
+    # "cows.json",
+    # "dog.json",
+    # "dog-agility.json",
+    # "horsejump-high.json",
+    # "horsejump-low.json",
+    # "impala0.json",
+    # "rs_dog.json"
+    ]
 
 class BADJAData():
     def __init__(self):
@@ -21,30 +33,31 @@ class BADJAData():
         self.animal_dict = {}
         self.smal_joint_info = SMALJointInfo()
         for animal_id, animal_json in enumerate(sorted(os.listdir(annotations_path))):
-            json_path = os.path.join(annotations_path, animal_json)
-            with open(json_path) as json_data:
-                animal_joint_data = json.load(json_data)
+            if animal_json not in IGNORE_ANIMALS:
+                json_path = os.path.join(annotations_path, animal_json)
+                with open(json_path) as json_data:
+                    animal_joint_data = json.load(json_data)
 
-            filenames = []
-            segnames = []
-            joints = []
-            visible = []
+                filenames = []
+                segnames = []
+                joints = []
+                visible = []
 
-            for image_annotation in animal_joint_data:
-                file_name = os.path.join(BADJA_PATH, image_annotation['image_path'])
-                seg_name = os.path.join(BADJA_PATH, image_annotation['segmentation_path'])
+                for image_annotation in animal_joint_data:
+                    file_name = os.path.join(BADJA_PATH, image_annotation['image_path'])
+                    seg_name = os.path.join(BADJA_PATH, image_annotation['segmentation_path'])
 
-                if os.path.exists(file_name) and os.path.exists(seg_name):
-                    filenames.append(file_name)
-                    segnames.append(seg_name)
-                    joints.append(np.array(image_annotation['joints']))
-                    visible.append(np.array(image_annotation['visibility']))
-                elif os.path.exists(file_name):
-                    print ("BADJA SEGMENTATION file path: {0} is missing".format(seg_name))
-                else:
-                    print ("BADJA IMAGE file path: {0} is missing".format(file_name))
+                    if os.path.exists(file_name) and os.path.exists(seg_name):
+                        filenames.append(file_name)
+                        segnames.append(seg_name)
+                        joints.append(np.array(image_annotation['joints']))
+                        visible.append(np.array(image_annotation['visibility']))
+                    elif os.path.exists(file_name):
+                        print ("BADJA SEGMENTATION file path: {0} is missing".format(seg_name))
+                    else:
+                        print ("BADJA IMAGE file path: {0} is missing".format(file_name))
             
-            self.animal_dict[animal_id] = (filenames, segnames, joints, visible)
+                self.animal_dict[animal_id] = (filenames, segnames, joints, visible)
 
         print ("Loaded BADJA dataset")
 

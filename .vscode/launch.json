@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: view_badja.py",
+            "name": "Python: View Annotations",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/view_badja.py",
+            "program": "${workspaceRoot}/code/view_badja.py",
             "console": "integratedTerminal"
-        },
+        }
     ]
 }

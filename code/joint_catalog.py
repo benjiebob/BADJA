@@ -1,7 +1,7 @@
-###################################################################################################################
-# Benjamin Biggs | bjb56@cam.ac.uk | http://mi.eng.cam.ac.uk/~bjb56/
-# Please cite `Creatures Great and SMAL: Recovering the shape and motion of animals from video' if you use this dataset
-###################################################################################################################
+###########################################################################################################################
+# Benjamin Biggs | bjb56@cam.ac.uk | http://mi.eng.cam.ac.uk/~bjb56/                                                      #
+# Please cite `Creatures Great and SMAL: Recovering the shape and motion of animals from video' if you use this dataset   #
+###########################################################################################################################
 
 ###################################################################################################################
 # Annotated joints 0 -> 32 relate to positions on the SMAL model (Zuffi et al 2018) defined in `smal_CVPR2018.pkl'.

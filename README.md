@@ -39,9 +39,7 @@ More detail on which SMAL joints have been annotated can be found in code/joint_
 
 3. Download [Extra Videos](http://mi.eng.cam.ac.uk/~bjb56/datasets/badja_extra_videos.zip) and unpack to location `BADJA/extra_videos'
 
-4. Edit the line 'BADJA_PATH = ".../BADJA"' in "code/badja_data.py" to the location that you cloned this respository.
-
-5. Test everything is correctly located and working properly. Demo code requires [numpy](https://pypi.org/project/numpy/), [scipy](https://pypi.org/project/scipy/), [opencv](https://pypi.org/project/opencv-contrib-python/), [matplotlib](https://pypi.org/project/matplotlib/))
+4. Test everything is correctly located and working properly. Demo code requires [numpy](https://pypi.org/project/numpy/), [scipy](https://pypi.org/project/scipy/), [opencv](https://pypi.org/project/opencv-contrib-python/), [matplotlib](https://pypi.org/project/matplotlib/))
    ```
    python code/view_badja.py
    ```
