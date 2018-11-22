@@ -14,7 +14,7 @@ BADJA is the Benchmark Animal Dataset of Joint Annotations released with the pap
 ```
 
 Annotations in are provided in this repository as *.json files for a total of 9 video sequences.
-1. Seven video sequences from the [DAVIS 2017 Video Segmentation dataset](https://arxiv.org/abs/1704.00675) of Pont-Tuset et al.,
+1. Seven video sequences from [DAVIS 2017 Video Segmentation dataset](https://arxiv.org/abs/1704.00675) (Pont-Tuset et al. 2017),
 2. Two video sequences provided in extra_videos which were sourced by hand. 
 
 Note that for the time being, raw frames for the tiger and cat sequences have been omitted from the extra_videos repository due to licensing restrictions.
