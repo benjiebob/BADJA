@@ -17,6 +17,7 @@ BADJA_PATH = os.path.dirname(sys.path[0]) # Assumes you are exectuting from "BAD
 IGNORE_ANIMALS = [
     # "bear.json",
     # "camel.json",
+    "cat_jump.json"
     # "cows.json",
     # "dog.json",
     # "dog-agility.json",
@@ -24,6 +25,7 @@ IGNORE_ANIMALS = [
     # "horsejump-low.json",
     # "impala0.json",
     # "rs_dog.json"
+    "tiger.json"
     ]
 
 class BADJAData():
