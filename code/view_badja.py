@@ -15,10 +15,14 @@ import cv2
 def draw_joints_on_image(rgb_img, joints, visibility, region_colors, marker_types):
     joints = joints[:, ::-1] # OpenCV works in (x, y) rather than (i, j)
 
-    disp_img = rgb_img.copy()    
+    disp_img = rgb_img.copy()   
     for joint_coord, visible, color, marker_type in zip(joints, visibility, region_colors, marker_types):
         if visible:
             joint_coord = joint_coord.astype(int)
+            #print("Colours: ", color)
+            #print(marker_types)
+            color = [int(i) for i in color]
+            #print("Colour Value: ", int(color))
             cv2.drawMarker(disp_img, tuple(joint_coord), color, marker_type, 30, thickness = 10)
     return disp_img
 
@@ -29,6 +33,8 @@ def main():
     data_loader = badja_data.get_loader()
 
     for rgb_img, sil_img, joints, visible, name in data_loader:
+        #print(visible)
+        #print(smal_joint_info.joint_colors)
         rgb_vis = draw_joints_on_image(rgb_img, joints, visible, smal_joint_info.joint_colors, smal_joint_info.annotated_markers)
         sil_vis = draw_joints_on_image(sil_img, joints, visible, smal_joint_info.joint_colors, smal_joint_info.annotated_markers)
 
