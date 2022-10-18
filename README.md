@@ -41,7 +41,7 @@ More detail on which SMAL joints have been annotated can be found in code/joint_
     
 2. Download [DAVIS 2017 TrainVal Full-Resolution](https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-trainval-Full-Resolution.zip) image and annotation frames and unpack      to location "BADJA/DAVIS"
 
-3. Download [Extra Videos](http://mi.eng.cam.ac.uk/~bjb56/datasets/badja_extra_videos.zip) and unpack to location `BADJA/extra_videos'
+3. Download [Extra Videos](https://drive.google.com/file/d/1ad1BLmzyOp_g3BfpE2yklNI-E1b8y4gy/view?usp=sharing) and unpack to location `BADJA/extra_videos'
 
 4. Test everything is correctly located and working properly. Demo code requires [numpy](https://pypi.org/project/numpy/), [scipy](https://pypi.org/project/scipy/), [opencv](https://pypi.org/project/opencv-contrib-python/) and [matplotlib](https://pypi.org/project/matplotlib/).
    ```
